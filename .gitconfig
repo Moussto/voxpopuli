@@ -1,0 +1,10 @@
+[user]
+	email = moustapha.agack@ocea-smart-building.fr 
+[alias]
+	st = status
+	ck = checkout
+	plog = log --pretty=oneline --abbrev-commit --graph
+	br = branch
+	rbi = "rebase -i"
+[credential]
+	helper = cache

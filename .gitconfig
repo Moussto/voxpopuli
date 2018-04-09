@@ -1,10 +1,13 @@
 [user]
-	email = moustapha.agack@ocea-smart-building.fr 
+	email = inhaeden@gmail.com
+	name = Mousstoh
 [alias]
 	st = status
 	ck = checkout
 	plog = log --pretty=oneline --abbrev-commit --graph
 	br = branch
 	rbi = "rebase -i"
+	fixuplast = commit --amend --no-edit
+	fixupon = "!f() { git commit --fixup=\"$1\"; git rebase -i --autosquash \"$1\"~1;}; f"
 [credential]
 	helper = cache

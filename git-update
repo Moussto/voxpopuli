@@ -1,0 +1,18 @@
+#!/bin/bash
+# This command is used to pull another branch
+# usage (when you're on `develop` for instance): git update <another branch name>"
+
+if [ "$1" = "" ]
+then
+        echo "Usage: git update <another branch name>"
+        exit 1
+fi
+
+git diff --exit-code
+
+if [ "$?" == "1" ]
+then
+        git stash && git checkout $1 && git pull && git checkout - && git stash pop
+else
+        git checkout $1 && git pull && git checkout -
+fi

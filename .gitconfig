@@ -14,5 +14,6 @@
         #wip
         delmerged = !git branch --merged | grep -v develop | xargs git branch -d
 	uco = reset HEAD~
+	wip = !git add . && git commit -m WIP
 [credential]
 	helper = cache

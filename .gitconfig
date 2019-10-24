@@ -13,6 +13,6 @@
         fixon = "!f() { git commit --fixup=\"$1\"; git rebase -i --autosquash \"$1\"~1;}; f"
         #wip
         delmerged = !git branch --merged | grep -v develop | xargs git branch -d
-	undo-commit = reset HEAD~
+	uco = reset HEAD~
 [credential]
 	helper = cache
